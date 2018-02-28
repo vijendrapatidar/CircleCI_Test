@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a1dc016-5331-47ca-97e4-08a7126793d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mac/testapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mac/testapp/MainActivity.java" />
-    </list>
+    <list default="true" id="3a1dc016-5331-47ca-97e4-08a7126793d5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mac/testapp/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -2180,7 +2178,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mac/testapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding />
         </state>
       </provider>
