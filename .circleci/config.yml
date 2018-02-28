@@ -18,7 +18,7 @@ jobs:
 
     environment:
       # Customize the JVM maximum heap limit
-      org.gradle.jvmargs=-Xmx1536m
+      JVM_OPTS: -Xmx3200m
       TERM: dumb
     
     steps:
