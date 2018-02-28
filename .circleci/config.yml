@@ -39,5 +39,4 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
       # run tests!
-      - run: - echo "test"
-  
+      - run: gradle test
