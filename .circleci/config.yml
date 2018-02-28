@@ -19,7 +19,6 @@ jobs:
     environment:
       # Customize the JVM maximum heap limit
       org.gradle.jvmargs=-Xmx1536m
-      ANDROID_HOME:Users/mac/Library/Developer/Xamarin/android-sdk-macosx
       TERM: dumb
     
     steps:
