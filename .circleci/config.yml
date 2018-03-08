@@ -7,22 +7,28 @@ jobs:
     working_directory: ~/code    
     steps:
       - checkout
-      - run: echo "Running..."
       - restore_cache:
-            key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
-            name: Download Dependencies
-            command: ./gradlew androidDependencies
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+  
       - save_cache:
-            paths:
-              - ~/.gradle
-            key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-            name: Initial build
-            command: ./gradlew clean assembleDebug --no-daemon --stacktrace
+          paths:
+            - ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - store_artifacts:
-            path: app/build/outputs/apk/
-            destination: apks/
+          path: app/build/reports
+          destination: reports
+      - store_test_results:
+          path: app/build/test-results
+      - run:
+          name: Run Build
+          command: ./gradlew build
+      - store_artifacts:
+          path: app/build/outputs/apk/
+          destination: artifact-file
+          
   dev-build:
    build:
     docker:
@@ -55,7 +61,7 @@ jobs:
    build:
     docker:
       # specify the version you desire here
-      - image: circleci/android:api-27-alpha
+      - image: circleci/android:api-25-alpha
     working_directory: ~/code
     steps:
       - checkout
