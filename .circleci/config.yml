@@ -25,6 +25,7 @@ jobs:
             path: app/build/outputs/apk/
             destination: apks/
   dev-build:
+   build:
     docker:
       # specify the version you desire here
       - image: circleci/android:api-25-alpha
@@ -53,6 +54,7 @@ jobs:
               export GIT_COMMIT_DESC=$(git log --format=oneline -n 1 | sed -E 's/^[^ ]+ (.*)$/\1/g')
               curl -F file=@app/build/outputs/apk/debug/app-debug.apk -F channels=$SLACK_CHANNEL -F token=$SLACK_API_TOKEN -F title="${CIRCLE_PROJECT_REPONAME} | branch -> ${CIRCLE_BRANCH} | commit -> ${GIT_COMMIT_DESC}"  https://slack.com/api/files.upload
   prod-build:
+   build:
     docker:
       # specify the version you desire here
       - image: circleci/android:api-27-alpha
