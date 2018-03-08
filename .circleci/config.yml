@@ -1,7 +1,6 @@
 version: 2
 jobs: 
  build:
-  check-build:
     docker:
       # specify the version you desire here
       - image: circleci/android:api-25-alpha
@@ -32,7 +31,6 @@ jobs:
     working_directory: ~/code    
     steps:
       - checkout
-      - run: echo "Running..."
       - restore_cache:
             key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
@@ -61,7 +59,6 @@ jobs:
     working_directory: ~/code
     steps:
       - checkout
-      - run: echo "Running..."
       - restore_cache:
             key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
